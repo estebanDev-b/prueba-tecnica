@@ -1,0 +1,51 @@
+// Font declarations
+@font-face {
+  font-family: "Canela-thin";
+  src: url("/fonts/Canela-Thin.otf");
+}
+
+@font-face {
+  font-family: "Inter-v";
+  src: url("/fonts/Inter-V.ttf");
+}
+
+// Variables
+$font-family-body: "Inter-v";
+$font-canela: "Canela-thin";
+$font-weight-normal: 400;
+$color-pearl: #fcf7f3;
+$color-neutral-pearl: #f2eee8;
+$color-neutral: #d9d6cc;
+$color-ocher: #977755;
+
+// Reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Typography
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: $font-weight-normal;
+}
+
+// Root styles
+:root {
+  --pearl: #{$color-pearl};
+  --neutral-pearl: #{$color-neutral-pearl};
+  --neutral: #{$color-neutral};
+  --ocher: #{$color-ocher};
+}
+
+// Body styles
+body {
+  font-family: $font-family-body;
+  background-color: var(--pearl);
+  color: var(--ocher);
+}

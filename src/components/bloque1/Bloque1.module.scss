@@ -1,0 +1,40 @@
+// Variables
+$background-color: #ebe7de;
+$border-color: #c1af99;
+$small-text-size: 35px;
+$big-title-size: 132px;
+$canela-font-size: 150px;
+
+.header {
+  background-color: $background-color;
+  margin-bottom: 1em;
+
+  .coTextHeader {
+    max-width: 1670px;
+    margin: 0 auto;
+    text-align: center;
+
+    .smallText {
+      font-size: $small-text-size;
+      padding: 30px 0;
+      color: #c1af99;
+    }
+
+    .bigTitle {
+      font-size: $big-title-size;
+      border-top: solid 1px $border-color;
+      border-bottom: solid 1px $border-color;
+      padding: 30px 0;
+      display: inline-block;
+
+      span {
+        letter-spacing: -8px;
+      }
+
+      .canela {
+        font-family: "Canela-thin", serif;
+        font-size: $canela-font-size;
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+// Variables
+$background-color: #ebe7df;
+$quote-color: #d9d6cc;
+$container-gap: 60px;
+$sticky-z-index: 10000;
+$quote-font-size: 90px;
+$author-font-size: 25px;
+
+// Mixins
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// Styles
+.scrollContainer {
+  height: 300vh;
+  background-color: $background-color;
+}
+
+.stickyContainer {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include flex-column;
+  gap: $container-gap;
+  z-index: $sticky-z-index;
+  background-color: $background-color;
+}
+
+.contentContainer {
+  @include flex-column;
+  gap: $container-gap;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.quote {
+  font-size: $quote-font-size;
+  margin: 0;
+  line-height: 1;
+  font-weight: normal;
+  letter-spacing: -0.050em;
+  color: $quote-color;
+  text-wrap: pretty;
+
+  .fontCanela {
+    font-family: "Canela-thin", serif;
+    display: inline;
+    white-space: nowrap ;
+    font-size: 100px;
+  }
+}
+
+.author {
+  font-size: $author-font-size;
+  margin: 0;
+}

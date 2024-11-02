@@ -1,0 +1,62 @@
+// Variables
+$card-bg-color: #f2eee8;
+$card-width: 1542px;
+$content-width: 1000px;
+$content-gap: 60px;
+$content-padding: 7em 0;
+$title-font-size: 50px;
+$text-font-size: 25px;
+
+// Mixins
+@mixin fullscreen-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.coMain {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+
+  .img {
+    @include fullscreen-image;
+  }
+}
+
+.card {
+  position: relative;
+  z-index: 2;
+  background-color: $card-bg-color;
+  width: $card-width;
+  height: 650px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .contentCard {
+    width: $content-width;
+    display: flex;
+    flex-direction: column;
+    gap: $content-gap;
+  }
+
+  h2 {
+    font-size: $title-font-size;
+  }
+
+  p {
+    font-size: $text-font-size;
+    text-wrap: pretty;
+    line-height: 1.6;
+    letter-spacing: -0.07em;
+  }
+}
